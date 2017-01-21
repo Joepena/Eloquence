@@ -12,6 +12,7 @@
 		D8C4DC9F1E333975008CCC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DC9D1E333975008CCC15 /* Main.storyboard */; };
 		D8C4DCA11E333975008CCC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA01E333975008CCC15 /* Assets.xcassets */; };
 		D8C4DCA41E333975008CCC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA21E333975008CCC15 /* LaunchScreen.storyboard */; };
+		D8C4DCAC1E33441A008CCC15 /* RecordSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D8C4DCA01E333975008CCC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C4DCA31E333975008CCC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C4DCA51E333975008CCC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpeechViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C4DC991E333975008CCC15 /* AppDelegate.swift */,
+				D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */,
 				D8C4DC9B1E333975008CCC15 /* ViewController.swift */,
 				D8C4DC9D1E333975008CCC15 /* Main.storyboard */,
 				D8C4DCA01E333975008CCC15 /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C4DCAC1E33441A008CCC15 /* RecordSpeechViewController.swift in Sources */,
 				D8C4DC9C1E333975008CCC15 /* ViewController.swift in Sources */,
 				D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */,
 			);

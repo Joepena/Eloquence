@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Speech View Controller-->
         <scene sceneID="nh5-UI-Rt1">
             <objects>
-                <viewController id="QH9-5v-zGd" sceneMemberID="viewController">
+                <viewController id="QH9-5v-zGd" customClass="RecordSpeechViewController" customModule="Eloquence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="COa-VL-7j9"/>
                         <viewControllerLayoutGuide type="bottom" id="eCl-ol-ZIW"/>
@@ -54,12 +54,27 @@
                     <view key="view" contentMode="scaleToFill" id="rG8-HY-dEt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-cz-shw">
+                                <rect key="frame" x="166.5" y="114" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8zm-cz-shw" firstAttribute="centerX" secondItem="rG8-HY-dEt" secondAttribute="centerX" id="OfK-rV-87Z"/>
+                            <constraint firstItem="8zm-cz-shw" firstAttribute="top" secondItem="COa-VL-7j9" secondAttribute="bottom" constant="94" id="iaD-0S-NK3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="8zm-cz-shw" id="stw-ay-dmW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWw-H0-etv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="139"/>
+            <point key="canvasLocation" x="576.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
