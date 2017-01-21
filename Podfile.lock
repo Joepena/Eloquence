@@ -4,6 +4,7 @@ PODS:
   - "!ProtoCompiler-gRPCPlugin (1.0.2)":
     - "!ProtoCompiler (= 3.0.2)"
     - gRPC-ProtoRPC (= 1.0.2)
+  - Alamofire (4.3.0)
   - BoringSSL (7.0):
     - BoringSSL/Implementation (= 7.0)
     - BoringSSL/Interface (= 7.0)
@@ -39,6 +40,7 @@ PODS:
   - Protobuf (3.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
   - googleapis (from `.`)
 
 EXTERNAL SOURCES:
@@ -48,6 +50,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   "!ProtoCompiler": cfad9cbe5299a4923b1c3c8f150818c91efd0b6d
   "!ProtoCompiler-gRPCPlugin": ee00d28bb35b26e2657f239833b8f2aa66724f96
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   BoringSSL: 50035b9d9eeff5529587311782fc57c00ebf13ae
   googleapis: daa20dca7a0097c6c3316fdfd888e0ba1b7c8921
   gRPC: dd3a91e0fb770b9fc4f43d1292fb19f2a2e04158
@@ -56,6 +59,6 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 02cc70b76bc0c5bc622ba27595cca2598d9fe528
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
 
-PODFILE CHECKSUM: 94ecaf9875aafaa95c52b9712365542b28bfc47d
+PODFILE CHECKSUM: 4499654b3a0ccbf25f9f27b2b4729a115f0cd12f
 
 COCOAPODS: 1.1.1

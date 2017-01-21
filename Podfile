@@ -7,5 +7,7 @@ target 'Eloquence' do
 
   # Pods for Eloquence
   pod 'googleapis', :path => '.'
+  pod 'Alamofire', '~> 4.3'
+
 
 end

@@ -9,8 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //record button component
     @IBOutlet weak var recordButton: UIButton!
+    
+    //dashboard components
+    var sentimentPercentage: Float? = nil
+    var sentimentlabel: String? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateSentiment(sentiment:String, score:Float) {
+        //takes a completion and uses the data to populate fields
+        print ("Update Score: \(score)")
+        print("Update Sentiment: \(sentiment)")
+        sentimentlabel = sentiment
+        sentimentPercentage = score
     }
 
 
