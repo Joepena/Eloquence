@@ -35,6 +35,8 @@ class RecordSpeechViewController: UIViewController {
     @IBAction func didPressStopButton(_ sender: Any) {
         stop(sender: self)
         self.audioProcessor.stopAudio()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func start() {

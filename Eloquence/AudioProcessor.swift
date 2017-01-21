@@ -78,6 +78,7 @@ class AudioProcessor : AudioControllerDelegate {
                                         print("got thru")
                                         let lastSentence = recognitionAlternative.transcript
                                         self.spokenSentences.append(lastSentence!)
+                                        SpeechTextProcessor.processText(text: lastSentence!)
 //                                        print(lastSentence)
                                         
                                     }
