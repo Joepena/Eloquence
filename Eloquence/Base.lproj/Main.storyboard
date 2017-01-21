@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jFN-xz-QDx" secondAttribute="bottom" constant="36" id="7XV-Ry-Zck"/>
                             <constraint firstItem="jFN-xz-QDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKQ-kX-ZTf"/>
@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8zm-cz-shw" firstAttribute="centerX" secondItem="rG8-HY-dEt" secondAttribute="centerX" id="OfK-rV-87Z"/>
                             <constraint firstItem="8zm-cz-shw" firstAttribute="top" secondItem="COa-VL-7j9" secondAttribute="bottom" constant="94" id="iaD-0S-NK3"/>

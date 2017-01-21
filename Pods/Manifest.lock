@@ -37,9 +37,15 @@ PODS:
     - Protobuf (~> 3.0)
   - gRPC-RxLibrary (1.0.2)
   - Protobuf (3.1.0)
+  - Realm (2.3.0):
+    - Realm/Headers (= 2.3.0)
+  - Realm/Headers (2.3.0)
+  - RealmSwift (2.3.0):
+    - Realm (= 2.3.0)
 
 DEPENDENCIES:
   - googleapis (from `.`)
+  - RealmSwift
 
 EXTERNAL SOURCES:
   googleapis:
@@ -55,7 +61,9 @@ SPEC CHECKSUMS:
   gRPC-ProtoRPC: 11533510522a5e9627883a597a796cfe6bef05f3
   gRPC-RxLibrary: 02cc70b76bc0c5bc622ba27595cca2598d9fe528
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
+  Realm: 69d7de9aa569a11eed490aaabc8f2109e3985ecf
+  RealmSwift: dc6f99ea55e59490cec69c860f91932b6bf7efb6
 
-PODFILE CHECKSUM: 94ecaf9875aafaa95c52b9712365542b28bfc47d
+PODFILE CHECKSUM: 70ddc18c5221eab137e6f2199ce311868e656d4e
 
 COCOAPODS: 1.1.1
