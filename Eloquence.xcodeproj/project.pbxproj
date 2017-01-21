@@ -12,9 +12,13 @@
 		D8C4DC9F1E333975008CCC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DC9D1E333975008CCC15 /* Main.storyboard */; };
 		D8C4DCA11E333975008CCC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA01E333975008CCC15 /* Assets.xcassets */; };
 		D8C4DCA41E333975008CCC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA21E333975008CCC15 /* LaunchScreen.storyboard */; };
+		DD19FE06E4BFA79724532A73 /* Pods_Eloquence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */; };
+		E17A38BC1E33472200870F82 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38B91E33472200870F82 /* AudioController.swift */; };
+		E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eloquence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DC961E333975008CCC15 /* Eloquence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eloquence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DC991E333975008CCC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C4DC9B1E333975008CCC15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,11 @@
 		D8C4DCA01E333975008CCC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C4DCA31E333975008CCC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C4DCA51E333975008CCC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC452547A7D4167CC87A8C30 /* Pods-Eloquence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eloquence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence.debug.xcconfig"; sourceTree = "<group>"; };
+		E17A38B91E33472200870F82 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		E17A38BA1E33472200870F82 /* Speech-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Speech-Bridging-Header.h"; sourceTree = "<group>"; };
+		E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		E754051D8F6E4CCBE13378E5 /* Pods-Eloquence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eloquence.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD19FE06E4BFA79724532A73 /* Pods_Eloquence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B94BE76E1A6FC97991888A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8C4DC8D1E333974008CCC15 = {
 			isa = PBXGroup;
 			children = (
 				D8C4DC981E333975008CCC15 /* Eloquence */,
 				D8C4DC971E333975008CCC15 /* Products */,
+				FA96886CE6B97ABEC796F83F /* Pods */,
+				0B94BE76E1A6FC97991888A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,9 @@
 		D8C4DC981E333975008CCC15 /* Eloquence */ = {
 			isa = PBXGroup;
 			children = (
+				E17A38B91E33472200870F82 /* AudioController.swift */,
+				E17A38BA1E33472200870F82 /* Speech-Bridging-Header.h */,
+				E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */,
 				D8C4DC991E333975008CCC15 /* AppDelegate.swift */,
 				D8C4DC9B1E333975008CCC15 /* ViewController.swift */,
 				D8C4DC9D1E333975008CCC15 /* Main.storyboard */,
@@ -64,6 +87,15 @@
 			path = Eloquence;
 			sourceTree = "<group>";
 		};
+		FA96886CE6B97ABEC796F83F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC452547A7D4167CC87A8C30 /* Pods-Eloquence.debug.xcconfig */,
+				E754051D8F6E4CCBE13378E5 /* Pods-Eloquence.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C4DCA81E333975008CCC15 /* Build configuration list for PBXNativeTarget "Eloquence" */;
 			buildPhases = (
+				13A67B461E668158C1898234 /* [CP] Check Pods Manifest.lock */,
 				D8C4DC921E333974008CCC15 /* Sources */,
 				D8C4DC931E333974008CCC15 /* Frameworks */,
 				D8C4DC941E333974008CCC15 /* Resources */,
+				BFE172163B08A5C000E0D3B8 /* [CP] Embed Pods Frameworks */,
+				BFCDC220A833B1BEF582DDEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +131,7 @@
 				TargetAttributes = {
 					D8C4DC951E333974008CCC15 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 53T6WGJL5K;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +167,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13A67B461E668158C1898234 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFCDC220A833B1BEF582DDEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFE172163B08A5C000E0D3B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8C4DC921E333974008CCC15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D8C4DC9C1E333975008CCC15 /* ViewController.swift in Sources */,
+				E17A38BC1E33472200870F82 /* AudioController.swift in Sources */,
 				D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */,
+				E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +344,10 @@
 		};
 		D8C4DCA91E333975008CCC15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC452547A7D4167CC87A8C30 /* Pods-Eloquence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 53T6WGJL5K;
 				INFOPLIST_FILE = Eloquence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Eloquence;
@@ -270,8 +358,10 @@
 		};
 		D8C4DCAA1E333975008CCC15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E754051D8F6E4CCBE13378E5 /* Pods-Eloquence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 53T6WGJL5K;
 				INFOPLIST_FILE = Eloquence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Eloquence;
@@ -299,6 +389,7 @@
 				D8C4DCAA1E333975008CCC15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
