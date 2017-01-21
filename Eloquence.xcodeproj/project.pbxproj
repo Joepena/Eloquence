@@ -12,10 +12,11 @@
 		D8C4DC9F1E333975008CCC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DC9D1E333975008CCC15 /* Main.storyboard */; };
 		D8C4DCA11E333975008CCC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA01E333975008CCC15 /* Assets.xcassets */; };
 		D8C4DCA41E333975008CCC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DCA21E333975008CCC15 /* LaunchScreen.storyboard */; };
+		D8C4DCAC1E33441A008CCC15 /* RecordSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */; };
 		DD19FE06E4BFA79724532A73 /* Pods_Eloquence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */; };
+		E1357A4C1E334E1C0021D9CF /* AudioProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1357A4B1E334E1C0021D9CF /* AudioProcessor.swift */; };
 		E17A38BC1E33472200870F82 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38B91E33472200870F82 /* AudioController.swift */; };
 		E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */; };
-		D8C4DCAC1E33441A008CCC15 /* RecordSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,12 +28,13 @@
 		D8C4DCA01E333975008CCC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C4DCA31E333975008CCC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C4DCA51E333975008CCC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpeechViewController.swift; sourceTree = "<group>"; };
 		DC452547A7D4167CC87A8C30 /* Pods-Eloquence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eloquence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence.debug.xcconfig"; sourceTree = "<group>"; };
+		E1357A4B1E334E1C0021D9CF /* AudioProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioProcessor.swift; sourceTree = "<group>"; };
 		E17A38B91E33472200870F82 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		E17A38BA1E33472200870F82 /* Speech-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Speech-Bridging-Header.h"; sourceTree = "<group>"; };
 		E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		E754051D8F6E4CCBE13378E5 /* Pods-Eloquence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eloquence.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence.release.xcconfig"; sourceTree = "<group>"; };
-		D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSpeechViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				D8C4DC991E333975008CCC15 /* AppDelegate.swift */,
 				D8C4DCAB1E33441A008CCC15 /* RecordSpeechViewController.swift */,
 				D8C4DC9B1E333975008CCC15 /* ViewController.swift */,
+				E1357A4B1E334E1C0021D9CF /* AudioProcessor.swift */,
 				D8C4DC9D1E333975008CCC15 /* Main.storyboard */,
 				D8C4DCA01E333975008CCC15 /* Assets.xcassets */,
 				D8C4DCA21E333975008CCC15 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 				E17A38BC1E33472200870F82 /* AudioController.swift in Sources */,
 				D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */,
 				E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */,
+				E1357A4C1E334E1C0021D9CF /* AudioProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

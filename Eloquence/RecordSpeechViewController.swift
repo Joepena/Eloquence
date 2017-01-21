@@ -14,18 +14,28 @@ class RecordSpeechViewController: UIViewController {
     var timer = Timer()
     var startTime = TimeInterval()
     
+    // initialize audio streaming processor
+    let audioProcessor = AudioProcessor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //let background = UIImage(named: "background.png")
         //self.view.backgroundColor = UIColor(patternImage: background)
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Start timer
         start()
+        
+        // Start recording
+        self.audioProcessor.recordAudio()
     }
     
+    @IBAction func didPressStopButton(_ sender: Any) {
+        stop(sender: self)
+        self.audioProcessor.stopAudio()
+    }
     
     private func start() {
         if !timer.isValid {
