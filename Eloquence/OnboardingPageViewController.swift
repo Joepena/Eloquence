@@ -63,7 +63,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     
     func finishOnboard() {
         // Create user with information
-        let user = User(name: nameEntered, wordsToAvoid: ["hate", "no", "uh", "like", "terrible", "no one", "never", "um", "hell"], wordsToUse: ["yes", "I", "love" ], wordOfTheDay: "eloquence")
+        let user = User(name: nameEntered, wordsToAvoid: ["hate", "no", "uh", "like", "terrible", "no one", "never", "um", "hell"], wordsToUse: ["yes", "I", "love" ], wordOfTheDay: "eloquence", lastSessionSentiment: 0.7)
         print("completed an onboarding for:")
         print(user)
         

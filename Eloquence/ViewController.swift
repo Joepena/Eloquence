@@ -12,8 +12,12 @@ class ViewController: UIViewController {
     //record button component
     @IBOutlet weak var recordButton: UIButton!
     
+    @IBOutlet weak var positivityLabel: UILabel!
+    
     @IBOutlet weak var needleShadow: UIImageView!
+    
     @IBOutlet weak var needle: UIImageView!
+    
     //dashboard components
     var sentimentPercentage: Float? = nil
     var sentimentlabel: String? = nil
@@ -24,6 +28,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        needle.isHidden = true
+        needleShadow.isHidden = true
 
 //        BackgroundImageLoader.loadBackground(imageName: "dashboard-bg", vc: self)
     }
