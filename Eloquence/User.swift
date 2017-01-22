@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 
 // Good stuff: http://swiftandpainless.com/nscoding-and-swift-structs/

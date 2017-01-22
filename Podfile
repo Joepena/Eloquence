@@ -7,7 +7,6 @@ target 'Eloquence' do
 
   # Pods for Eloquence
   pod 'googleapis', :path => '.'
-  pod 'RealmSwift'
 
 end
 
