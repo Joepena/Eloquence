@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Brandon_light.otf</key>
+	<string></string>
+	<key>Brandon_light_it.otf</key>
+	<string></string>
+	<key>Brandon_med.otf</key>
+	<string></string>
+	<key>Brandon_med_it.otf</key>
+	<string></string>
+	<key>Brandon_reg.otf</key>
+	<string></string>
+	<key>Brandon_reg_it.otf</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -22,6 +34,10 @@
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Eloquence needs access to your microphone in order to analyze your speech and help you speak better.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
