@@ -11,6 +11,7 @@ import UIKit
 protocol EditWordsDelegate {
     func getWords() -> [String]
     func getBackgroundImageName() -> String
+    func getButtonImageName() -> String
     func updateWords(words: [String])
 }
 
@@ -22,6 +23,8 @@ enum EditWordsType {
 
 class EditWordsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var addWordButton: UIButton!
+    
     var delegate: EditWordsDelegate?
     
     var words: [String] = []
@@ -36,7 +39,7 @@ class EditWordsViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.tableView.backgroundColor = UIColor.clear
         
-        self.backgroundImageView.image = UIImage(named: (delegate?.getBackgroundImageName())!)
+        self.backgroundImageView.image = UIImage(named: (delegate?.getBackgroundImageName())!)       
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -56,6 +59,10 @@ class EditWordsViewController: UIViewController, UITableViewDataSource, UITableV
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+//    override func viewWillLayoutSubviews() {
+//        addWordButton.imageView?.image = UIImage(named: (delegate?.getButtonImageName())!)
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
