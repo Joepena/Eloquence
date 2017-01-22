@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T2e-46-ilT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T2e-46-ilT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -119,7 +119,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Literally" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-kV-FVa">
-                                                    <rect key="frame" x="151" y="37" width="73" height="33"/>
+                                                    <rect key="frame" x="152" y="37" width="72.5" height="33"/>
                                                     <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="23"/>
                                                     <color key="textColor" red="0.33333333333333331" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -259,47 +259,51 @@ Keep track of the expression of your speech with our positivity gauge on the das
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-cz-shw">
-                                <rect key="frame" x="166.5" y="114" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Listening" translatesAutoresizingMaskIntoConstraints="NO" id="bMG-Xf-JHT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-6N-XYi">
+                                <rect key="frame" x="126" y="582" width="123" height="29"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                <color key="textColor" red="0.31764705882352939" green="0.68235294117647061" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-tE-umo">
-                                <rect key="frame" x="313" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-oH-Yen">
+                                <rect key="frame" x="149" y="295" width="77" height="77"/>
+                                <state key="normal" image="stop"/>
                                 <connections>
-                                    <action selector="didPressStopButton:" destination="QH9-5v-zGd" eventType="touchUpInside" id="ZH9-uC-CkH"/>
+                                    <action selector="didPressStop:" destination="QH9-5v-zGd" eventType="touchUpInside" id="0CZ-zH-63K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unwanted Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsN-ck-bKC">
-                                <rect key="frame" x="126" y="599" width="123" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-NM-SWI">
+                                <rect key="frame" x="141" y="393" width="92" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-6N-XYi">
-                                <rect key="frame" x="126" y="585" width="123" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unwanted Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsN-ck-bKC">
+                                <rect key="frame" x="126" y="578" width="128" height="29"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
+                                <color key="textColor" red="0.77647058823529413" green="0.29411764705882354" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vsN-ck-bKC" firstAttribute="centerY" secondItem="rG8-HY-dEt" secondAttribute="centerY" id="9rc-Su-jBj"/>
-                            <constraint firstItem="8zm-cz-shw" firstAttribute="centerX" secondItem="rG8-HY-dEt" secondAttribute="centerX" id="OfK-rV-87Z"/>
-                            <constraint firstItem="vsN-ck-bKC" firstAttribute="centerX" secondItem="rG8-HY-dEt" secondAttribute="centerX" id="eBg-bg-Fz4"/>
-                            <constraint firstItem="8zm-cz-shw" firstAttribute="top" secondItem="COa-VL-7j9" secondAttribute="bottom" constant="94" id="iaD-0S-NK3"/>
+                            <constraint firstItem="fg8-oH-Yen" firstAttribute="centerX" secondItem="rG8-HY-dEt" secondAttribute="centerX" id="7fN-7S-TiY"/>
+                            <constraint firstItem="eCl-ol-ZIW" firstAttribute="top" secondItem="vsN-ck-bKC" secondAttribute="bottom" constant="60" id="FIG-Xn-QGN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bL-6N-XYi" secondAttribute="trailing" constant="110" id="KVV-lf-fJp"/>
+                            <constraint firstItem="eCl-ol-ZIW" firstAttribute="top" secondItem="9bL-6N-XYi" secondAttribute="bottom" constant="56" id="OVt-70-Wft"/>
+                            <constraint firstItem="9bL-6N-XYi" firstAttribute="leading" secondItem="rG8-HY-dEt" secondAttribute="leadingMargin" constant="110" id="SUY-F9-vNE"/>
+                            <constraint firstItem="fg8-oH-Yen" firstAttribute="centerY" secondItem="rG8-HY-dEt" secondAttribute="centerY" id="bFM-6F-HWW"/>
+                            <constraint firstItem="vsN-ck-bKC" firstAttribute="leading" secondItem="rG8-HY-dEt" secondAttribute="leadingMargin" constant="110" id="ixD-Xj-tAK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vsN-ck-bKC" secondAttribute="trailing" constant="105" id="rnK-DG-Daa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="rightWordLabel" destination="9bL-6N-XYi" id="U5G-vC-M8v"/>
-                        <outlet property="timerLabel" destination="8zm-cz-shw" id="stw-ay-dmW"/>
                         <outlet property="wrongWordLabel" destination="vsN-ck-bKC" id="8rh-tq-yv9"/>
                     </connections>
                 </viewController>
@@ -352,7 +356,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBC-eP-RKv">
-                                <rect key="frame" x="94" y="550.5" width="187.5" height="37.5"/>
+                                <rect key="frame" x="94.5" y="550.5" width="187.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -470,9 +474,11 @@ Keep track of the expression of your speech with our positivity gauge on the das
         </scene>
     </scenes>
     <resources>
+        <image name="Listening" width="414" height="736"/>
         <image name="dashboard-bg" width="414" height="736"/>
         <image name="info" width="21" height="21"/>
         <image name="start" width="85" height="85"/>
+        <image name="stop" width="77" height="77"/>
         <image name="use-words-bg" width="414" height="736"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
