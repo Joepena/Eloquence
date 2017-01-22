@@ -1,4 +1,4 @@
-//
+ //
 //  OnboardingPageViewController.swift
 //  Eloquence
 //
@@ -19,21 +19,20 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     var nameEntered: String = ""
     var useWordsEntered: [String] = []
     var avoidWordsEntered: [String] = []
-    
     var onboardDelegate: OnboardCompletionDelegate?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set color behind dots
         view.backgroundColor = UIColor.clear
-        
+
         // Set datasource
         dataSource = self
-        
+
         // Set first view controller
         setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
-        
+
         print("Hi, we're about to onboard you")
     }
     
@@ -52,19 +51,19 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     func getStepZero() -> OnboardStepZeroVC {
         return storyboard!.instantiateViewController(withIdentifier: "StepZero") as! OnboardStepZeroVC
     }
-    
+
     func getStepOne() -> OnboardStepOneVC {
         let nameEntryView = storyboard!.instantiateViewController(withIdentifier: "StepOne") as! OnboardStepOneVC
         nameEntryView.delegate = self
         return nameEntryView
     }
-    
+
     func getStepTwo() -> OnboardStepTwoVC {
         let greetingView = storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! OnboardStepTwoVC
         greetingView.nameEntered = nameEntered
         return greetingView
     }
-    
+
     func getStepThree() -> OnboardStepThreeVC {
         let avoidWordsEntryView = storyboard!.instantiateViewController(withIdentifier: "StepThree") as! OnboardStepThreeVC
         avoidWordsEntryView.delegate = self
@@ -80,7 +79,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     func getStepFive() -> OnboardStepFiveVC {
         return storyboard!.instantiateViewController(withIdentifier: "StepFive") as! OnboardStepFiveVC
     }
-    
+
     func nameWasEntered(name: String) {
         // Store name that was entered
         print("hello \(name)!!!!!")
@@ -95,26 +94,25 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     func useWordsWereEntered(sentence: String) {
         useWordsEntered = sentence.components(separatedBy: [",", " "])
     }
-    
-    
+
     func finishOnboard() {
         // Create user with information
-        let user = User(name: nameEntered, wordsToAvoid: avoidWordsEntered, wordsToUse: useWordsEntered, wordOfTheDay: "eloquence")
+        let user = User(name: nameEntered, wordsToAvoid: avoidWordsEntered, wordsToUse: useWordsEntered, wordOfTheDay: "eloquence", lastSessionSentiment: 120.0)
         print("completed an onboarding for:")
         print(user)
-        
+
         // Go back to parent
-        
+
         // self.parent is IniitialViewController
         self.willMove(toParentViewController: self.parent)
         self.view.removeFromSuperview()
         self.removeFromParentViewController()
-        
+
         // Call container parent view controller
         onboardDelegate?.onboardDidComplete(user: user)
-        
+
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -129,7 +127,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
 }
 
 extension OnboardingPageViewController : UIPageViewControllerDataSource  {
-    
+
     // Satrt at first dot when call setViewControllers()
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
@@ -139,8 +137,8 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 6
     }
-    
-    
+
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if viewController is OnboardStepFiveVC {
             // 5 -> 4
@@ -162,8 +160,8 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
             return nil
         }
     }
-    
-    
+
+
     // Order of view controllers
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if viewController is OnboardStepZeroVC {

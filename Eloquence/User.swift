@@ -14,9 +14,11 @@ import Foundation
 struct User {
     let name: String
     var wordsToAvoid: [String]
-    let wordsToUse: [String]
+    var wordsToUse: [String]
     let wordOfTheDay: String
-
+    var lastSessionSentiment:Float = 120.0
+    
+    
     // Static func to return user read from storage
     // TODO: Not sure if better way to do this because everytime we access we need to read from file system...
     // we want to read once, and only re-read of a write has been made...
@@ -78,13 +80,15 @@ extension User {
             // Get strings
             guard let name = aDecoder.decodeObject(forKey: "name") as? String else { user = nil; super.init(); return nil }
             guard let wordOfTheDay = aDecoder.decodeObject(forKey: "wordOfTheDay") as? String else { user = nil; super.init(); return nil }
+            guard let lastSessionSentiment = aDecoder.decodeObject(forKey: "lastSessionSentiment") as? Float else { user = nil; super.init(); return nil }
+
             
             // Get Arrays
             guard let wordsToAvoid = aDecoder.decodeObject(forKey: "wordsToAvoid") as? [String] else { user = nil; super.init(); return nil }
-            guard let wordsToUse = aDecoder.decodeObject(forKey: "wordsToAvoid") as? [String] else { user = nil; super.init(); return nil }
+            guard let wordsToUse = aDecoder.decodeObject(forKey: "wordsToUse") as? [String] else { user = nil; super.init(); return nil }
             
             // We dont need to write a constructor for structs?
-            user = User(name: name, wordsToAvoid: wordsToAvoid, wordsToUse: wordsToUse, wordOfTheDay: wordOfTheDay)
+            user = User(name: name, wordsToAvoid: wordsToAvoid, wordsToUse: wordsToUse, wordOfTheDay: wordOfTheDay, lastSessionSentiment: lastSessionSentiment)
             
             super.init()
         }
@@ -95,6 +99,7 @@ extension User {
             aCoder.encode(user?.wordsToAvoid, forKey: "wordsToAvoid")
             aCoder.encode(user?.wordsToUse, forKey: "wordsToUse")
             aCoder.encode(user?.wordOfTheDay, forKey: "wordOfTheDay")
+            aCoder.encode(user?.lastSessionSentiment, forKey: "lastSessionSentiment")
         }
     }
 
