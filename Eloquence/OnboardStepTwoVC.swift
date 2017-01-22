@@ -10,10 +10,14 @@ import UIKit
 
 class OnboardStepTwoVC: UIViewController {
 
+    @IBOutlet weak var userGreeting: UILabel!
+    var nameEntered: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        userGreeting.text = "Nice to meet you \(nameEntered!)"
     }
 
     override func didReceiveMemoryWarning() {

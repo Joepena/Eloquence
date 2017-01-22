@@ -40,6 +40,8 @@
 		E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194D26C1E33D43F000A6B78 /* OnboardingPageViewController.swift */; };
 		E194D26F1E33D846000A6B78 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194D26E1E33D846000A6B78 /* InitialViewController.swift */; };
 		E1B588D51E343A2300170018 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B588D41E343A2300170018 /* InfoViewController.swift */; };
+		EDCBABC61E34E8E900BBA317 /* OnboardStepFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBABC51E34E8E900BBA317 /* OnboardStepFourVC.swift */; };
+		EDCBABC81E34EA9200BBA317 /* OnboardStepFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBABC71E34EA9200BBA317 /* OnboardStepFiveVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		E194D26E1E33D846000A6B78 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		E1B588D41E343A2300170018 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E754051D8F6E4CCBE13378E5 /* Pods-Eloquence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eloquence.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eloquence/Pods-Eloquence.release.xcconfig"; sourceTree = "<group>"; };
+		EDCBABC51E34E8E900BBA317 /* OnboardStepFourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepFourVC.swift; sourceTree = "<group>"; };
+		EDCBABC71E34EA9200BBA317 /* OnboardStepFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepFiveVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				E150BE831E33F1E100A8E07C /* OnboardStepOneVC.swift */,
 				E150BE851E33F1F300A8E07C /* OnboardStepTwoVC.swift */,
 				E150BE871E33F20500A8E07C /* OnboardStepThreeVC.swift */,
+				EDCBABC51E34E8E900BBA317 /* OnboardStepFourVC.swift */,
+				EDCBABC71E34EA9200BBA317 /* OnboardStepFiveVC.swift */,
 				E14207261E3414D3007B7218 /* OnboardTextField.swift */,
 			);
 			name = Onboarding;
@@ -352,10 +358,12 @@
 				E1357A4E1E336B2B0021D9CF /* SpeechTextProcessor.swift in Sources */,
 				E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */,
 				E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */,
+				EDCBABC61E34E8E900BBA317 /* OnboardStepFourVC.swift in Sources */,
 				E167062D1E3498A600794550 /* BackgroundImageLoader.swift in Sources */,
 				E1B588D51E343A2300170018 /* InfoViewController.swift in Sources */,
 				D8B8553F1E33CCFE00321E7C /* Network.swift in Sources */,
 				E1357A4C1E334E1C0021D9CF /* AudioProcessor.swift in Sources */,
+				EDCBABC81E34EA9200BBA317 /* OnboardStepFiveVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

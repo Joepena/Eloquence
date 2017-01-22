@@ -12,7 +12,6 @@ protocol OnboardingNameEntryDelegate {
     func nameWasEntered(name: String)
 }
 
-
 class OnboardStepOneVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,6 +29,14 @@ class OnboardStepOneVC: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
+        
+        // Update parent UIPageVC of name which was entered
+//        delegate?.nameWasEntered(name: nameTextField.text!)
+    }
+
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         
         // Update parent UIPageVC of name which was entered
         delegate?.nameWasEntered(name: nameTextField.text!)
