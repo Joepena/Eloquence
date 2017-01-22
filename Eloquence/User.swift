@@ -14,7 +14,7 @@ import Foundation
 struct User {
     let name: String
     var wordsToAvoid: [String]
-    let wordsToUse: [String]
+    var wordsToUse: [String]
     let wordOfTheDay: String
 
     // Static func to return user read from storage
@@ -81,7 +81,7 @@ extension User {
             
             // Get Arrays
             guard let wordsToAvoid = aDecoder.decodeObject(forKey: "wordsToAvoid") as? [String] else { user = nil; super.init(); return nil }
-            guard let wordsToUse = aDecoder.decodeObject(forKey: "wordsToAvoid") as? [String] else { user = nil; super.init(); return nil }
+            guard let wordsToUse = aDecoder.decodeObject(forKey: "wordsToUse") as? [String] else { user = nil; super.init(); return nil }
             
             // We dont need to write a constructor for structs?
             user = User(name: name, wordsToAvoid: wordsToAvoid, wordsToUse: wordsToUse, wordOfTheDay: wordOfTheDay)

@@ -15,8 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        UINavigationBar.appearance().backgroundColor = UIColor(red:0.31, green:0.36, blue:0.46, alpha:1.0)
+//        UINavigationBar.appearance().tintColor = UIColor(red:0.31, green:0.36, blue:0.46, alpha:1.0)
+        
+        
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: .white, NSFontAttributeName: "Brandon Grotesque"]
+
+//        printFonts()
+        
         return true
+    }
+    
+    func printFonts() {
+        let fontFamilyNames = UIFont.familyNames
+        for familyName in fontFamilyNames {
+            print("------------------------------")
+            print("Font Family Name = [\(familyName)]")
+            let names = UIFont.fontNames(forFamilyName: familyName )
+            print("Font Names = [\(names)]")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -31,6 +31,9 @@
 		E150BE881E33F20500A8E07C /* OnboardStepThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150BE871E33F20500A8E07C /* OnboardStepThreeVC.swift */; };
 		E167062D1E3498A600794550 /* BackgroundImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167062C1E3498A600794550 /* BackgroundImageLoader.swift */; };
 		E16706321E349B2700794550 /* EditWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16706311E349B2700794550 /* EditWordsViewController.swift */; };
+		E16706341E34A9FD00794550 /* UseWordsModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16706331E34A9FD00794550 /* UseWordsModelAdapter.swift */; };
+		E16706361E34AA0700794550 /* AvoidWordsModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16706351E34AA0700794550 /* AvoidWordsModelAdapter.swift */; };
+		E16706381E34B13100794550 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16706371E34B13100794550 /* WordTableViewCell.swift */; };
 		E17A38BC1E33472200870F82 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38B91E33472200870F82 /* AudioController.swift */; };
 		E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */; };
 		E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194D26C1E33D43F000A6B78 /* OnboardingPageViewController.swift */; };
@@ -66,6 +69,9 @@
 		E150BE871E33F20500A8E07C /* OnboardStepThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepThreeVC.swift; sourceTree = "<group>"; };
 		E167062C1E3498A600794550 /* BackgroundImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageLoader.swift; sourceTree = "<group>"; };
 		E16706311E349B2700794550 /* EditWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordsViewController.swift; sourceTree = "<group>"; };
+		E16706331E34A9FD00794550 /* UseWordsModelAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseWordsModelAdapter.swift; sourceTree = "<group>"; };
+		E16706351E34AA0700794550 /* AvoidWordsModelAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvoidWordsModelAdapter.swift; sourceTree = "<group>"; };
+		E16706371E34B13100794550 /* WordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		E17A38B91E33472200870F82 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		E17A38BA1E33472200870F82 /* Speech-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Speech-Bridging-Header.h"; sourceTree = "<group>"; };
 		E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
@@ -132,6 +138,9 @@
 				E1B588D41E343A2300170018 /* InfoViewController.swift */,
 				D8B8553E1E33CCFE00321E7C /* Network.swift */,
 				E167062C1E3498A600794550 /* BackgroundImageLoader.swift */,
+				E16706331E34A9FD00794550 /* UseWordsModelAdapter.swift */,
+				E16706351E34AA0700794550 /* AvoidWordsModelAdapter.swift */,
+				E16706371E34B13100794550 /* WordTableViewCell.swift */,
 			);
 			path = Eloquence;
 			sourceTree = "<group>";
@@ -323,13 +332,16 @@
 			files = (
 				D8C4DCAC1E33441A008CCC15 /* RecordSpeechViewController.swift in Sources */,
 				E150BE881E33F20500A8E07C /* OnboardStepThreeVC.swift in Sources */,
+				E16706361E34AA0700794550 /* AvoidWordsModelAdapter.swift in Sources */,
 				D8C4DC9C1E333975008CCC15 /* ViewController.swift in Sources */,
+				E16706341E34A9FD00794550 /* UseWordsModelAdapter.swift in Sources */,
 				E17A38BC1E33472200870F82 /* AudioController.swift in Sources */,
 				D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */,
 				E1357A501E33C85C0021D9CF /* User.swift in Sources */,
 				E16706321E349B2700794550 /* EditWordsViewController.swift in Sources */,
 				E150BE841E33F1E100A8E07C /* OnboardStepOneVC.swift in Sources */,
 				E150BE821E33F1CD00A8E07C /* OnboardStepZeroVC.swift in Sources */,
+				E16706381E34B13100794550 /* WordTableViewCell.swift in Sources */,
 				E150BE861E33F1F300A8E07C /* OnboardStepTwoVC.swift in Sources */,
 				E194D26F1E33D846000A6B78 /* InitialViewController.swift in Sources */,
 				E14207271E3414D3007B7218 /* OnboardTextField.swift in Sources */,
