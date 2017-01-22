@@ -1,4 +1,4 @@
-//
+ //
 //  OnboardingPageViewController.swift
 //  Eloquence
 //
@@ -17,68 +17,68 @@ protocol OnboardCompletionDelegate {
 class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDelegate {
 
     var nameEntered: String = ""
-    
+
     var onboardDelegate: OnboardCompletionDelegate?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set color behind dots
 //        view.backgroundColor = UIColor.init(red: 220.0, green: 220.0, blue: 220.0, alpha: 0.3)
         view.backgroundColor = .lightGray
-        
+
         // Set datasource
         dataSource = self
-        
+
         // Set first view controller
         setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
-        
+
         print("Hi, we're about to onboard you")
     }
-    
+
     func getStepZero() -> OnboardStepZeroVC {
         return storyboard!.instantiateViewController(withIdentifier: "StepZero") as! OnboardStepZeroVC
     }
-    
+
     func getStepOne() -> OnboardStepOneVC {
         let nameEntryView = storyboard!.instantiateViewController(withIdentifier: "StepOne") as! OnboardStepOneVC
         nameEntryView.delegate = self
         return nameEntryView
     }
-    
+
     func getStepTwo() -> OnboardStepTwoVC {
         return storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! OnboardStepTwoVC
     }
-    
+
     func getStepThree() -> OnboardStepThreeVC {
         return storyboard!.instantiateViewController(withIdentifier: "StepThree") as! OnboardStepThreeVC
     }
-    
+
     func nameWasEntered(name: String) {
         // Store name that was entered
         print("hello \(name)!!!!!")
         nameEntered = name
     }
-    
-    
+
+
     func finishOnboard() {
         // Create user with information
-        let user = User(name: nameEntered, wordsToAvoid: ["hate", "no", "uh", "like", "terrible", "no one", "never", "um", "hell"], wordsToUse: ["yes", "I", "love" ], wordOfTheDay: "eloquence",lastSessionSentiment: 120.0)
+        let user = User(name: nameEntered, wordsToAvoid: ["hate", "no", "uh", "like", "terrible", "no one", "never", "um", "hell"], wordsToUse: ["yes", "I", "love" ], wordOfTheDay: "eloquence", lastSessionSentiment: 0.7)
         print("completed an onboarding for:")
         print(user)
-        
+
         // Go back to parent
-        
+
         // self.parent is IniitialViewController
         self.willMove(toParentViewController: self.parent)
         self.view.removeFromSuperview()
         self.removeFromParentViewController()
-        
+
         // Call container parent view controller
         onboardDelegate?.onboardDidComplete(user: user)
-        
+
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -93,18 +93,18 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
 }
 
 extension OnboardingPageViewController : UIPageViewControllerDataSource  {
-    
+
     // Satrt at first dot when call setViewControllers()
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
-    
+
     // 4 dots
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 4
     }
-    
-    
+
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if viewController is OnboardStepThreeVC {
             // 3 -> 2
@@ -120,8 +120,8 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
             return nil
         }
     }
-    
-    
+
+
     // Order of view controllers
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if viewController is OnboardStepZeroVC {
@@ -136,7 +136,7 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
         } else {
             // 3 -> end of the road
             finishOnboard()
-            
+
             return nil
         }
     }
