@@ -33,12 +33,11 @@ class InitialViewController: UIViewController, OnboardCompletionDelegate {
             loadOnboarding()
             
         }
-        
-        
+                
         // No user, get outta here
-        guard let user = user else {
-            return
-        }
+//        guard let user = user else {
+//            return
+//        }
         
         // Modifying words to avoid and not modifiying original user
         // Since it copies by value

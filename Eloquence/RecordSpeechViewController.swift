@@ -166,10 +166,7 @@ class RecordSpeechViewController: UIViewController, WordFoundInSpeechDelegate {
             rightWordLabel.isHidden = false
             rightWordLabel.text = word.word
             break
-            
-            
-        default:
-            break
+
         }
     }
     // MARK: WordFoundInSpeechDelegate

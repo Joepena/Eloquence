@@ -88,11 +88,12 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     
     func avoidWordsWereEntered(sentence: String) {
         // Store as list of strings
-        avoidWordsEntered = sentence.components(separatedBy: [",", " "])
+        avoidWordsEntered = sentence.components(separatedBy: [",", " "]).filter({ $0 != ""})
+        
     }
     
     func useWordsWereEntered(sentence: String) {
-        useWordsEntered = sentence.components(separatedBy: [",", " "])
+        useWordsEntered = sentence.components(separatedBy: [",", " "]).filter({ $0 != ""})
     }
 
     func finishOnboard() {
