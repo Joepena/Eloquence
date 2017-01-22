@@ -92,79 +92,81 @@ class RecordSpeechViewController: UIViewController, WordFoundInSpeechDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func hideWrongWord() {
-        UIView.animate(withDuration: 1, delay:2, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
-            self.wrongWordLabel.alpha = 0
-        }, completion: { finished in
-            self.wrongWordLabel.isHidden = true
-            self.wrongWordLabel.alpha = 1.0
-            
-            // Now, check if any more words to show!
-            if self.wordAlertQueue.count  > 0 {
-                let nextWord = self.wordAlertQueue.remove(at: 0)
-                self.showWord(word: nextWord)
-                
-            } else {
-                self.isFading = false
-            }
-        })
-        
-
-    }
-    func showWrongWord(word: String, completion: @escaping () -> Void) {
-        // fading begun
-        isFading = true
-        // Set text
-        self.wrongWordLabel.text = word
-        
-        // Animate in
-        UIView.animate(withDuration: 1, animations: {
-            print("fadingg")
-            self.wrongWordLabel.isHidden = false
-        }, completion: { Bool in
-            completion()
-        })
-        
-    }
-    
-    func hideGoodWord() {
-        UIView.animate(withDuration: 1, delay:2, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
-            self.rightWordLabel.alpha = 0
-        }, completion: { finished in
-            self.rightWordLabel.isHidden = true
-            self.rightWordLabel.alpha = 1.0
-            
-            // Now, check if any more words to show!
-            if self.wordAlertQueue.count  > 0 {
-                let nextWord = self.wordAlertQueue.remove(at: 0)
-                self.showWord(word: nextWord)
-                
-            } else {
-                self.isFading = false
-            }
-        })
-        
-    }
-    func showGoodWord(word: String) {
-        // Set text (shud be good word label)
-        self.rightWordLabel.text = word
-        
-        // Animate in
-        UIView.animate(withDuration: 1, animations: {
-             self.rightWordLabel.isHidden = false
-        })
-    }
-    
+//    func hideWrongWord() {
+//        UIView.animate(withDuration: 1, delay:2, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+//            self.wrongWordLabel.alpha = 0
+//        }, completion: { finished in
+//            self.wrongWordLabel.isHidden = true
+//            self.wrongWordLabel.alpha = 1.0
+//            
+//            // Now, check if any more words to show!
+//            if self.wordAlertQueue.count  > 0 {
+//                let nextWord = self.wordAlertQueue.remove(at: 0)
+//                self.showWord(word: nextWord)
+//                
+//            } else {
+//                self.isFading = false
+//            }
+//        })
+//        
+//
+//    }
+//    func showWrongWord(word: String, completion: @escaping () -> Void) {
+//        // fading begun
+//        isFading = true
+//        // Set text
+//        self.wrongWordLabel.text = word
+//        
+//        // Animate in
+//        UIView.animate(withDuration: 1, animations: {
+//            print("fadingg")
+//            self.wrongWordLabel.isHidden = false
+//        }, completion: { Bool in
+//            completion()
+//        })
+//        
+//    }
+//    
+//    func hideGoodWord() {
+//        UIView.animate(withDuration: 1, delay:2, options:UIViewAnimationOptions.transitionFlipFromTop, animations: {
+//            self.rightWordLabel.alpha = 0
+//        }, completion: { finished in
+//            self.rightWordLabel.isHidden = true
+//            self.rightWordLabel.alpha = 1.0
+//            
+//            // Now, check if any more words to show!
+//            if self.wordAlertQueue.count  > 0 {
+//                let nextWord = self.wordAlertQueue.remove(at: 0)
+//                self.showWord(word: nextWord)
+//                
+//            } else {
+//                self.isFading = false
+//            }
+//        })
+//        
+//    }
+//    func showGoodWord(word: String) {
+//        // Set text (shud be good word label)
+//        self.rightWordLabel.text = word
+//        
+//        // Animate in
+//        UIView.animate(withDuration: 1, animations: {
+//             self.rightWordLabel.isHidden = false
+//        })
+//    }
+//    
     func showWord(word: WordContainer) {
         switch word.type {
         case .bad:
-            showWrongWord(word: word.word, completion: hideWrongWord)
+            wrongWordLabel.isHidden = false
             
+            wrongWordLabel.text = word.word
             break
         case .good:
+            rightWordLabel.isHidden = false
+            rightWordLabel.text = word.word
+            break
             
-            showGoodWord(word: word.word)
-            hideGoodWord()
             
         default:
             break
@@ -173,16 +175,17 @@ class RecordSpeechViewController: UIViewController, WordFoundInSpeechDelegate {
     // MARK: WordFoundInSpeechDelegate
     
     func wordFound(word: WordContainer) {
-        if !isFading {
-        // if is fading, add to queue and fade him later lol
-            wordAlertQueue.append(word)
-        } else {
-            // Show the word
-            showWord(word: word )
-        }
-        
+//        if !isFading {
+//        // if is fading, add to queue and fade him later lol
+//            wordAlertQueue.append(word)
+//        } else {
+//            // Show the word
+//            showWord(word: word )
+//        }
+//        
         // Show the first word in the queue
         // let nextWord = wordAlertQueue.remove(at: 0)
+        showWord(word: word)
         
 
         

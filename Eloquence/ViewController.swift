@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         needleShadow.isHidden = true
 
         setupSentimentLabel()
+        
+//        self.navigationController?.navigationBar.backgroundColor = UIColor.init(red:0.31, green:0.36, blue:0.46, alpha:1.0)
+//        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     func setupSentimentLabel() {
@@ -40,14 +43,14 @@ class ViewController: UIViewController {
         
         if index! <= 80.0 && index! >= 0.0 {
             self.positivityLabel.text = "negative"
-            self.positivityLabel.textColor = UIColor.red
+            self.positivityLabel.textColor = UIColor(red:0.88, green:0.28, blue:0.24, alpha:1.0)
         }
         else if index! >= 80.0 && index! <= 160.0 {
             self.positivityLabel.text = "neutral"
             self.positivityLabel.textColor = UIColor.gray
         } else {
             self.positivityLabel.text = "happy"
-            self.positivityLabel.textColor = UIColor.green
+            self.positivityLabel.textColor = UIColor(red:0.31, green:0.73, blue:0.53, alpha:1.0)
         }
         
     }
