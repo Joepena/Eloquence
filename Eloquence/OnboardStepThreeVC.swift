@@ -8,12 +8,26 @@
 
 import UIKit
 
+protocol OnboardingAvoidEntryDelegate {
+    func avoidWordsWereEntered(sentence: String)
+}
+
 class OnboardStepThreeVC: UIViewController {
 
+    var delegate: OnboardingAvoidEntryDelegate?
+    
+    @IBOutlet weak var wordsToAvoidTextField: OnboardTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
+        // Update parent UIPageVC of name which was entered
+        delegate?.avoidWordsWereEntered(sentence: wordsToAvoidTextField.text!)
     }
 
     override func didReceiveMemoryWarning() {

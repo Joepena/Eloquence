@@ -14,9 +14,11 @@ protocol OnboardCompletionDelegate {
     func onboardDidComplete(user: User)
 }
 
-class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDelegate {
+class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDelegate, OnboardingUseEntryDelegate, OnboardingAvoidEntryDelegate {
 
     var nameEntered: String = ""
+    var useWordsEntered: [String] = []
+    var avoidWordsEntered: [String] = []
     
     var onboardDelegate: OnboardCompletionDelegate?
     
@@ -24,8 +26,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
         super.viewDidLoad()
         
         // Set color behind dots
-//        view.backgroundColor = UIColor.init(red: 220.0, green: 220.0, blue: 220.0, alpha: 0.3)
-        view.backgroundColor = .lightGray
+        view.backgroundColor = UIColor.clear
         
         // Set datasource
         dataSource = self
@@ -34,6 +35,18 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
         setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
         
         print("Hi, we're about to onboard you")
+    }
+    
+    // Eliminates white background for nav bar
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        for view in self.view.subviews {
+            if view is UIScrollView {
+                view.frame = self.view.bounds
+            } else if view is UIPageControl {
+                view.backgroundColor = UIColor.clear
+            }
+        }
     }
     
     func getStepZero() -> OnboardStepZeroVC {
@@ -47,11 +60,25 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
     }
     
     func getStepTwo() -> OnboardStepTwoVC {
-        return storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! OnboardStepTwoVC
+        let greetingView = storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! OnboardStepTwoVC
+        greetingView.nameEntered = nameEntered
+        return greetingView
     }
     
     func getStepThree() -> OnboardStepThreeVC {
-        return storyboard!.instantiateViewController(withIdentifier: "StepThree") as! OnboardStepThreeVC
+        let avoidWordsEntryView = storyboard!.instantiateViewController(withIdentifier: "StepThree") as! OnboardStepThreeVC
+        avoidWordsEntryView.delegate = self
+        return avoidWordsEntryView
+    }
+    
+    func getStepFour() -> OnboardStepFourVC {
+        let useWordsEntryView = storyboard!.instantiateViewController(withIdentifier: "StepFour") as! OnboardStepFourVC
+        useWordsEntryView.delegate = self
+        return useWordsEntryView
+    }
+    
+    func getStepFive() -> OnboardStepFiveVC {
+        return storyboard!.instantiateViewController(withIdentifier: "StepFive") as! OnboardStepFiveVC
     }
     
     func nameWasEntered(name: String) {
@@ -60,10 +87,19 @@ class OnboardingPageViewController: UIPageViewController, OnboardingNameEntryDel
         nameEntered = name
     }
     
+    func avoidWordsWereEntered(sentence: String) {
+        // Store as list of strings
+        avoidWordsEntered = sentence.components(separatedBy: [",", " "])
+    }
+    
+    func useWordsWereEntered(sentence: String) {
+        useWordsEntered = sentence.components(separatedBy: [",", " "])
+    }
+    
     
     func finishOnboard() {
         // Create user with information
-        let user = User(name: nameEntered, wordsToAvoid: ["hate", "no", "uh", "like"], wordsToUse: ["yes", "I", "love" ], wordOfTheDay: "eloquence")
+        let user = User(name: nameEntered, wordsToAvoid: avoidWordsEntered, wordsToUse: useWordsEntered, wordOfTheDay: "eloquence")
         print("completed an onboarding for:")
         print(user)
         
@@ -99,14 +135,20 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
         return 0
     }
     
-    // 4 dots
+    // 6 dots
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 4
+        return 6
     }
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController is OnboardStepThreeVC {
+        if viewController is OnboardStepFiveVC {
+            // 5 -> 4
+            return getStepFour()
+        } else if viewController is OnboardStepFourVC {
+            // 4 -> 3
+            return getStepThree()
+        } else if viewController is OnboardStepThreeVC {
             // 3 -> 2
             return getStepTwo()
         } else if viewController is OnboardStepTwoVC {
@@ -133,10 +175,15 @@ extension OnboardingPageViewController : UIPageViewControllerDataSource  {
         } else if viewController is OnboardStepTwoVC {
             // 2 -> 3
             return getStepThree()
+        } else if viewController is OnboardStepThreeVC {
+            // 3 -> 4
+            return getStepFour()
+        } else if viewController is OnboardStepFourVC {
+            // 4 -> 5
+            return getStepFive()
         } else {
-            // 3 -> end of the road
+            // 5 -> end of the road
             finishOnboard()
-            
             return nil
         }
     }
