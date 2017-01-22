@@ -31,48 +31,104 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="dashboard-bg" translatesAutoresizingMaskIntoConstraints="NO" id="kwP-Kc-skR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-c3-Fum">
+                                <rect key="frame" x="277" y="493" width="28.5" height="21"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                <color key="textColor" red="0.91523437500000004" green="0.90634860439999998" blue="0.90634860439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-xz-QDx">
-                                <rect key="frame" x="145.5" y="546" width="85" height="85"/>
+                                <rect key="frame" x="145" y="546" width="85" height="85"/>
                                 <state key="normal" image="start"/>
                                 <connections>
                                     <segue destination="QH9-5v-zGd" kind="presentation" id="ySl-7t-1gd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-bv-JlW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-bv-JlW">
                                 <rect key="frame" x="21" y="318" width="107" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="2IR-7y-wPx"/>
                                     <constraint firstAttribute="height" constant="40" id="ME3-p3-8lu"/>
                                 </constraints>
+                                <state key="normal" image="avoid"/>
                                 <connections>
                                     <action selector="avoidWordsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQ5-Ty-uPK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apO-gf-iBw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apO-gf-iBw">
                                 <rect key="frame" x="247" y="318" width="112" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="8jm-MB-fbG"/>
                                     <constraint firstAttribute="width" constant="112" id="iKt-lf-6UF"/>
                                 </constraints>
+                                <state key="normal" image="use"/>
                                 <connections>
                                     <action selector="useWordsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAN-nw-hAg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle" translatesAutoresizingMaskIntoConstraints="NO" id="6XG-tA-fCy">
+                                <rect key="frame" x="158" y="159" width="92" height="61"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-6l-ZzT">
+                                <rect key="frame" x="162" y="163" width="88" height="61"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qw-EM-Pd8">
+                                <rect key="frame" x="188" y="493" width="28" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="Mhb-Qu-jMH"/>
+                                    <constraint firstAttribute="height" constant="21" id="PY5-hE-4Pf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                <color key="textColor" red="0.91523437500000004" green="0.90634860436893205" blue="0.90634860436893205" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="multitudinous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOM-GT-AEx">
+                                <rect key="frame" x="188" y="405" width="120" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.88981568813323975" green="0.88411635160446167" blue="0.8868439793586731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adj: comprising many items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkd-jB-Dm3">
+                                <rect key="frame" x="146" y="432.5" width="209" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.8898156881" green="0.88411635160000002" blue="0.88684397940000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wnZ-6l-ZzT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="3Lc-bh-nw9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jFN-xz-QDx" secondAttribute="bottom" constant="36" id="7XV-Ry-Zck"/>
+                            <constraint firstItem="zkd-jB-Dm3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="9L9-Xl-5PC"/>
                             <constraint firstItem="kwP-Kc-skR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Ns-Cz-nhx"/>
+                            <constraint firstItem="6XG-tA-fCy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="142" id="FeV-6f-bhv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wnZ-6l-ZzT" secondAttribute="trailing" constant="109" id="H3k-IP-aFk"/>
+                            <constraint firstItem="wnZ-6l-ZzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="146" id="H6M-el-io8"/>
                             <constraint firstAttribute="trailing" secondItem="kwP-Kc-skR" secondAttribute="trailing" id="I8h-pg-tfH"/>
                             <constraint firstItem="tLv-bv-JlW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="254" id="K3p-y9-ncC"/>
                             <constraint firstItem="apO-gf-iBw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="P9O-oA-vMo"/>
                             <constraint firstItem="kwP-Kc-skR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QkJ-pJ-nK4"/>
                             <constraint firstAttribute="trailing" secondItem="kwP-Kc-skR" secondAttribute="trailing" id="SzS-GW-ASY"/>
+                            <constraint firstItem="oOM-GT-AEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="172" id="WKd-0Y-ks3"/>
+                            <constraint firstItem="oBM-c3-Fum" firstAttribute="leading" secondItem="3Qw-EM-Pd8" secondAttribute="trailing" constant="61" id="XNf-xD-MtD"/>
+                            <constraint firstItem="oBM-c3-Fum" firstAttribute="top" secondItem="kwP-Kc-skR" secondAttribute="bottom" constant="-174" id="XtJ-Uw-6kJ"/>
                             <constraint firstItem="tLv-bv-JlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="YNZ-Pr-UOh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oOM-GT-AEx" secondAttribute="trailing" constant="51" id="aXr-1y-Llg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zkd-jB-Dm3" secondAttribute="trailing" constant="4" id="d43-4B-x3C"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kwP-Kc-skR" secondAttribute="bottom" id="d4P-9P-Fpw"/>
+                            <constraint firstItem="oBM-c3-Fum" firstAttribute="top" secondItem="apO-gf-iBw" secondAttribute="bottom" constant="136" id="enD-Ky-iDT"/>
+                            <constraint firstItem="3Qw-EM-Pd8" firstAttribute="top" secondItem="zkd-jB-Dm3" secondAttribute="bottom" constant="46" id="gRQ-2w-gSH"/>
+                            <constraint firstItem="3Qw-EM-Pd8" firstAttribute="baseline" secondItem="oBM-c3-Fum" secondAttribute="baseline" id="gmg-Mn-DKd"/>
                             <constraint firstItem="jFN-xz-QDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKQ-kX-ZTf"/>
                             <constraint firstItem="kwP-Kc-skR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kwI-KA-wDi"/>
+                            <constraint firstItem="oOM-GT-AEx" firstAttribute="top" secondItem="apO-gf-iBw" secondAttribute="bottom" constant="48" id="l7O-ZD-scA"/>
+                            <constraint firstItem="oBM-c3-Fum" firstAttribute="leading" secondItem="kwP-Kc-skR" secondAttribute="trailing" constant="-98" id="obH-Q1-M4C"/>
+                            <constraint firstItem="jFN-xz-QDx" firstAttribute="top" secondItem="3Qw-EM-Pd8" secondAttribute="bottom" constant="32" id="pej-OC-Yz5"/>
+                            <constraint firstItem="3Qw-EM-Pd8" firstAttribute="top" secondItem="wnZ-6l-ZzT" secondAttribute="bottom" constant="269" id="plY-Ja-GhT"/>
+                            <constraint firstItem="6XG-tA-fCy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="qbp-0C-qUi"/>
                             <constraint firstItem="apO-gf-iBw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="254" id="wWV-fV-S7m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6XG-tA-fCy" secondAttribute="trailing" constant="109" id="whN-ng-hp8"/>
+                            <constraint firstItem="zkd-jB-Dm3" firstAttribute="top" secondItem="oOM-GT-AEx" secondAttribute="bottom" constant="0.5" id="x4q-Ax-F6N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Progress" id="Abw-0G-R0P">
@@ -83,6 +139,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="needle" destination="6XG-tA-fCy" id="Wt6-MD-KaV"/>
+                        <outlet property="needleShadow" destination="wnZ-6l-ZzT" id="Qyn-wU-PNe"/>
                         <outlet property="recordButton" destination="jFN-xz-QDx" id="Gky-t3-DjS"/>
                         <segue destination="X3B-ms-oSo" kind="showDetail" identifier="EditWordsSegue" id="gNH-XY-S1m"/>
                     </connections>
@@ -119,7 +177,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Literally" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-kV-FVa">
+<<<<<<< HEAD
                                                     <rect key="frame" x="152" y="37" width="72.5" height="33"/>
+=======
+                                                    <rect key="frame" x="151.5" y="37" width="72.5" height="33"/>
+>>>>>>> 2434a1d2ff04302360309470a494b445a855e434
                                                     <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="23"/>
                                                     <color key="textColor" red="0.33333333333333331" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -136,19 +198,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23A-jk-5t7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23A-jk-5t7">
                                 <rect key="frame" x="119" y="570" width="137" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="G0u-B1-BHI"/>
                                     <constraint firstAttribute="height" constant="36" id="VrX-ZI-OvD"/>
                                 </constraints>
+                                <state key="normal" image="add-avoid-word"/>
                                 <connections>
                                     <action selector="addWordButtonPressed:" destination="X3B-ms-oSo" eventType="touchUpInside" id="dGU-RF-G0F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-SJ-8v5">
-                                <rect key="frame" x="16" y="573" width="34" height="30"/>
-                                <state key="normal" title="Back">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-SJ-8v5">
+                                <rect key="frame" x="20" y="573" width="16" height="35"/>
+                                <state key="normal" image="back">
                                     <color key="titleColor" red="0.33333333333333331" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -169,10 +232,11 @@
                             <constraint firstItem="ov6-ih-whL" firstAttribute="leading" secondItem="SVx-a2-nlt" secondAttribute="leading" id="dMW-NA-ci4"/>
                             <constraint firstAttribute="trailing" secondItem="ov6-ih-whL" secondAttribute="trailing" id="gx9-na-6WC"/>
                             <constraint firstItem="ov6-ih-whL" firstAttribute="top" secondItem="SVx-a2-nlt" secondAttribute="top" id="i8L-dV-RmB"/>
-                            <constraint firstItem="ov6-ih-whL" firstAttribute="leading" secondItem="Epg-SJ-8v5" secondAttribute="trailing" constant="-50" id="yxU-3r-a1S"/>
+                            <constraint firstItem="ov6-ih-whL" firstAttribute="leading" secondItem="Epg-SJ-8v5" secondAttribute="trailing" constant="-36" id="yxU-3r-a1S"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addWordButton" destination="23A-jk-5t7" id="7op-cx-aQC"/>
                         <outlet property="backgroundImageView" destination="ov6-ih-whL" id="TJM-tP-Y8F"/>
                         <outlet property="tableView" destination="0wx-mK-xEe" id="pGi-m7-1vo"/>
                     </connections>
@@ -207,7 +271,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-7j-CuI">
-                                <rect key="frame" x="298" y="20" width="61" height="37"/>
+                                <rect key="frame" x="292" y="20" width="67" height="32"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -217,7 +281,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkq-OU-20k">
-                                <rect key="frame" x="141" y="602" width="94" height="37"/>
+                                <rect key="frame" x="133" y="607" width="110" height="32"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
                                 <state key="normal" title="Sounds Good!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,13 +414,17 @@ Keep track of the expression of your speech with our positivity gauge on the das
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Welcome to Eloquence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGQ-TS-Rc8">
-                                <rect key="frame" x="52" y="90" width="272" height="37.5"/>
+                                <rect key="frame" x="34.5" y="90" width="307" height="30.5"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBC-eP-RKv">
+<<<<<<< HEAD
                                 <rect key="frame" x="94.5" y="550.5" width="187.5" height="37.5"/>
+=======
+                                <rect key="frame" x="79.5" y="557.5" width="217" height="30.5"/>
+>>>>>>> 2434a1d2ff04302360309470a494b445a855e434
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -396,7 +464,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gI4-L5-lN7" customClass="OnboardTextField" customModule="Eloquence" customModuleProvider="target">
-                                <rect key="frame" x="67" y="342" width="241" height="29"/>
+                                <rect key="frame" x="67" y="347" width="241" height="24"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -474,11 +542,23 @@ Keep track of the expression of your speech with our positivity gauge on the das
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="Listening" width="414" height="736"/>
+=======
+        <image name="add-avoid-word" width="164" height="49"/>
+        <image name="avoid" width="126" height="49"/>
+        <image name="back" width="16" height="35"/>
+>>>>>>> 2434a1d2ff04302360309470a494b445a855e434
         <image name="dashboard-bg" width="414" height="736"/>
         <image name="info" width="21" height="21"/>
+        <image name="needle" width="67" height="61"/>
+        <image name="needle-shadow" width="67" height="61"/>
         <image name="start" width="85" height="85"/>
+<<<<<<< HEAD
         <image name="stop" width="77" height="77"/>
+=======
+        <image name="use" width="126" height="49"/>
+>>>>>>> 2434a1d2ff04302360309470a494b445a855e434
         <image name="use-words-bg" width="414" height="736"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

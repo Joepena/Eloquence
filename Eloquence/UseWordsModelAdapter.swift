@@ -24,6 +24,10 @@ class UseWordsModelAdapter: EditWordsDelegate {
     func getBackgroundImageName() -> String {
         return "use-words-bg"
     }
+    
+    func getButtonImageName() -> String {
+        return "add-use-word"
+    }
 
     func updateWords(words: [String]) {
         // Change this user

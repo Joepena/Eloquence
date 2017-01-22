@@ -24,6 +24,9 @@ class AvoidWordsModelAdapter: EditWordsDelegate {
     func getBackgroundImageName() -> String {
         return "avoid-words-bg"
     }
+    func getButtonImageName() -> String {
+        return "add-avoid-word"
+    }
     
     func updateWords(words: [String]) {
         // Change this user

@@ -19,7 +19,7 @@ class BackgroundImageLoader {
         UIImage(named: imageName)?.draw(in: vc.view.bounds)
         
         // Get image from current context
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         // End context
         UIGraphicsEndImageContext()
