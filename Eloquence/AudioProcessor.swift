@@ -16,15 +16,19 @@ class AudioProcessor : AudioControllerDelegate {
     var audioData: NSMutableData!
     
     var spokenSentences: [String] = []
+    //DASHBOARD REFERENCE
+    var dashboard: ViewController?
     
     init() {
         AudioController.sharedInstance.delegate = self
         
     }
     
-    func recordAudio() {
-        let audioSession = AVAudioSession.sharedInstance()
+    func recordAudio(parent:ViewController?) {
         
+        let audioSession = AVAudioSession.sharedInstance()
+        //parent to dashboard then place in stopAudio call
+        dashboard = parent
         do {
             try audioSession.setCategory(AVAudioSessionCategoryRecord)
         } catch {
@@ -42,11 +46,15 @@ class AudioProcessor : AudioControllerDelegate {
         SpeechRecognitionService.sharedInstance.stopStreaming()
         print("Stopped Streaming")
         
+        var paragraphSpoken = ""
         // Dump stored sentences and process
         for sentence in self.spokenSentences {
             print(sentence)
+            paragraphSpoken+=sentence
         }
         
+        //dashboard reference
+        SpeechTextProcessor.postProcessSentiment(paragraph: paragraphSpoken,dashboardVC: dashboard!)
         // Clear it
         self.spokenSentences.removeAll()
     }

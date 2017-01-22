@@ -26,10 +26,13 @@ class RecordSpeechViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // Start timer
+        //parent ViewController to dashboard
+        let parent = self.presentingViewController as? ViewController
+        //pass parent down the recordAudio method in order to achieve modification of state
         start()
         
         // Start recording
-        self.audioProcessor.recordAudio()
+        self.audioProcessor.recordAudio(parent:parent)
     }
     
     @IBAction func didPressStopButton(_ sender: Any) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8B8553F1E33CCFE00321E7C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8553E1E33CCFE00321E7C /* Network.swift */; };
 		D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DC991E333975008CCC15 /* AppDelegate.swift */; };
 		D8C4DC9C1E333975008CCC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DC9B1E333975008CCC15 /* ViewController.swift */; };
 		D8C4DC9F1E333975008CCC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DC9D1E333975008CCC15 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eloquence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B8553E1E33CCFE00321E7C /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D8C4DC961E333975008CCC15 /* Eloquence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eloquence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DC991E333975008CCC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C4DC9B1E333975008CCC15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				E1357A4F1E33C85C0021D9CF /* User.swift */,
 				E194D26E1E33D846000A6B78 /* InitialViewController.swift */,
 				E1B588D41E343A2300170018 /* InfoViewController.swift */,
+				D8B8553E1E33CCFE00321E7C /* Network.swift */,
 			);
 			path = Eloquence;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */,
 				E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */,
 				E1B588D51E343A2300170018 /* InfoViewController.swift in Sources */,
+				D8B8553F1E33CCFE00321E7C /* Network.swift in Sources */,
 				E1357A4C1E334E1C0021D9CF /* AudioProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
