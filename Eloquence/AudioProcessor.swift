@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import googleapis
+import WatchKit
 
 let SAMPLE_RATE = 16000
 
@@ -46,12 +47,20 @@ class AudioProcessor : AudioControllerDelegate {
         SpeechRecognitionService.sharedInstance.stopStreaming()
         print("Stopped Streaming")
         
+        //logic for finding good and bad words
+        
         var paragraphSpoken = ""
+        
         // Dump stored sentences and process
+        
+        
         for sentence in self.spokenSentences {
             print(sentence)
             paragraphSpoken+=sentence
         }
+        
+        
+        
         
         //dashboard reference
         SpeechTextProcessor.postProcessSentiment(paragraph: paragraphSpoken,dashboardVC: dashboard!)

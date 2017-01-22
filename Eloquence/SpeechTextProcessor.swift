@@ -8,13 +8,34 @@
 
 import Foundation
 import UIKit
-
+import AudioToolbox
 
 class SpeechTextProcessor {
     
     static func processText(text: String) {
         print("Processing...")
         print(text)
+        let wordsToUse = User.getCurrentUser()?.wordsToUse
+        
+        let setOfGoodWords = Set(wordsToUse!.map({ $0 }))
+        
+        
+        let wordsToAvoid = User.getCurrentUser()?.wordsToAvoid
+        
+        let setOfBadWords = Set(wordsToAvoid!)
+        
+        for word in text.components(separatedBy: " "){
+            print(word)
+            if setOfBadWords.contains(word){
+                print("badWord")
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                
+            }
+            else if setOfGoodWords.contains(word){
+                print("Good word")
+            }
+        }
+
     }
     
     static func postProcessSentiment(paragraph: String, dashboardVC: ViewController){
