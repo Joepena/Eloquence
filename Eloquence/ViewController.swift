@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     //record button component
     @IBOutlet weak var recordButton: UIButton!
     
-    //dashboard components
-    var sentimentPercentage: Float? = nil
-    var sentimentlabel: String? = nil
-    
     // Segue destinations type
     var destinationType: EditWordsType = .NONE
     
@@ -79,15 +75,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
-    func updateSentiment(sentiment:String, score:Float) {
-        //takes a completion and uses the data to populate fields
-        print ("Update Score: \(score)")
-        print("Update Sentiment: \(sentiment)")
-        sentimentlabel = sentiment
-        sentimentPercentage = score
-    }
-
 
 }
 

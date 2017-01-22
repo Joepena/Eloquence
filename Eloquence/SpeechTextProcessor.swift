@@ -60,7 +60,10 @@ class SpeechTextProcessor {
             print("Got score: \(score)")
             print("Got sentiment: \(sentiment)")
             
-            dashboardVC.updateSentiment(sentiment: sentiment,score: score)
+            let degreesOfSentiment = 120*score+120
+            var user = User.getCurrentUser()
+            user?.lastSessionSentiment = degreesOfSentiment
+            User.encode(user: user!)
         }
     }
 }
