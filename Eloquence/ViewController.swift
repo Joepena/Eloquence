@@ -32,7 +32,24 @@ class ViewController: UIViewController {
         needle.isHidden = true
         needleShadow.isHidden = true
 
-//        BackgroundImageLoader.loadBackground(imageName: "dashboard-bg", vc: self)
+        setupSentimentLabel()
+    }
+    
+    func setupSentimentLabel() {
+        let index = User.getCurrentUser()?.lastSessionSentiment
+        
+        if index! <= 80.0 && index! >= 0.0 {
+            self.positivityLabel.text = "negative"
+            self.positivityLabel.textColor = UIColor.red
+        }
+        else if index! >= 80.0 && index! <= 160.0 {
+            self.positivityLabel.text = "neutral"
+            self.positivityLabel.textColor = UIColor.gray
+        } else {
+            self.positivityLabel.text = "happy"
+            self.positivityLabel.textColor = UIColor.green
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

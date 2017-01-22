@@ -49,7 +49,22 @@ class SpeechTextProcessor {
         completion(wordsFound)
 
     }
-    
+    static func setupSentimentLabel(dashboardVC: ViewController) {
+        let index = User.getCurrentUser()?.lastSessionSentiment
+        
+        if index! <= 80.0 && index! >= 0.0 {
+            dashboardVC.positivityLabel.text = "negative"
+            dashboardVC.positivityLabel.textColor = UIColor.red
+        }
+        else if index! >= 80.0 && index! <= 160.0 {
+            dashboardVC.positivityLabel.text = "neutral"
+            dashboardVC.positivityLabel.textColor = UIColor.gray
+        } else {
+            dashboardVC.positivityLabel.text = "happy"
+            dashboardVC.positivityLabel.textColor = UIColor.green
+        }
+        
+    }
     static func postProcessSentiment(paragraph: String, dashboardVC: ViewController){
         
         Network.sentimentIndex(speech: paragraph) { (_score, _sentiment) in
@@ -64,6 +79,8 @@ class SpeechTextProcessor {
             var user = User.getCurrentUser()
             user?.lastSessionSentiment = degreesOfSentiment
             User.encode(user: user!)
+            
+            setupSentimentLabel(dashboardVC: dashboardVC)
         }
     }
 }
