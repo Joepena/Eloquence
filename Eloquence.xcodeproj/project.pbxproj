@@ -29,6 +29,8 @@
 		E150BE841E33F1E100A8E07C /* OnboardStepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150BE831E33F1E100A8E07C /* OnboardStepOneVC.swift */; };
 		E150BE861E33F1F300A8E07C /* OnboardStepTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150BE851E33F1F300A8E07C /* OnboardStepTwoVC.swift */; };
 		E150BE881E33F20500A8E07C /* OnboardStepThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150BE871E33F20500A8E07C /* OnboardStepThreeVC.swift */; };
+		E167062D1E3498A600794550 /* BackgroundImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167062C1E3498A600794550 /* BackgroundImageLoader.swift */; };
+		E16706321E349B2700794550 /* EditWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16706311E349B2700794550 /* EditWordsViewController.swift */; };
 		E17A38BC1E33472200870F82 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38B91E33472200870F82 /* AudioController.swift */; };
 		E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */; };
 		E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194D26C1E33D43F000A6B78 /* OnboardingPageViewController.swift */; };
@@ -62,6 +64,8 @@
 		E150BE831E33F1E100A8E07C /* OnboardStepOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepOneVC.swift; sourceTree = "<group>"; };
 		E150BE851E33F1F300A8E07C /* OnboardStepTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepTwoVC.swift; sourceTree = "<group>"; };
 		E150BE871E33F20500A8E07C /* OnboardStepThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardStepThreeVC.swift; sourceTree = "<group>"; };
+		E167062C1E3498A600794550 /* BackgroundImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageLoader.swift; sourceTree = "<group>"; };
+		E16706311E349B2700794550 /* EditWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWordsViewController.swift; sourceTree = "<group>"; };
 		E17A38B91E33472200870F82 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		E17A38BA1E33472200870F82 /* Speech-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Speech-Bridging-Header.h"; sourceTree = "<group>"; };
 		E17A38BB1E33472200870F82 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		D8C4DC981E333975008CCC15 /* Eloquence */ = {
 			isa = PBXGroup;
 			children = (
+				E167062E1E349A0D00794550 /* ViewControllers */,
 				E16C291C1E3446F700C60AA8 /* SpeechProcessing */,
 				E16C291B1E3446CC00C60AA8 /* Onboarding */,
 				D8C4DC991E333975008CCC15 /* AppDelegate.swift */,
@@ -126,6 +131,7 @@
 				E194D26E1E33D846000A6B78 /* InitialViewController.swift */,
 				E1B588D41E343A2300170018 /* InfoViewController.swift */,
 				D8B8553E1E33CCFE00321E7C /* Network.swift */,
+				E167062C1E3498A600794550 /* BackgroundImageLoader.swift */,
 			);
 			path = Eloquence;
 			sourceTree = "<group>";
@@ -141,6 +147,14 @@
 				E142071F1E33F77B007B7218 /* Brandon_reg.otf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E167062E1E349A0D00794550 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E16706311E349B2700794550 /* EditWordsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E16C291B1E3446CC00C60AA8 /* Onboarding */ = {
@@ -313,6 +327,7 @@
 				E17A38BC1E33472200870F82 /* AudioController.swift in Sources */,
 				D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */,
 				E1357A501E33C85C0021D9CF /* User.swift in Sources */,
+				E16706321E349B2700794550 /* EditWordsViewController.swift in Sources */,
 				E150BE841E33F1E100A8E07C /* OnboardStepOneVC.swift in Sources */,
 				E150BE821E33F1CD00A8E07C /* OnboardStepZeroVC.swift in Sources */,
 				E150BE861E33F1F300A8E07C /* OnboardStepTwoVC.swift in Sources */,
@@ -321,6 +336,7 @@
 				E1357A4E1E336B2B0021D9CF /* SpeechTextProcessor.swift in Sources */,
 				E17A38BD1E33472200870F82 /* SpeechRecognitionService.swift in Sources */,
 				E194D26D1E33D43F000A6B78 /* OnboardingPageViewController.swift in Sources */,
+				E167062D1E3498A600794550 /* BackgroundImageLoader.swift in Sources */,
 				E1B588D51E343A2300170018 /* InfoViewController.swift in Sources */,
 				D8B8553F1E33CCFE00321E7C /* Network.swift in Sources */,
 				E1357A4C1E334E1C0021D9CF /* AudioProcessor.swift in Sources */,
