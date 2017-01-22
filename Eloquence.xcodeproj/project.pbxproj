@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D8B8553F1E33CCFE00321E7C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8553E1E33CCFE00321E7C /* Network.swift */; };
+		D8B8556F1E34C29800321E7C /* WordContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8556E1E34C29800321E7C /* WordContainer.swift */; };
 		D8C4DC9A1E333975008CCC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DC991E333975008CCC15 /* AppDelegate.swift */; };
 		D8C4DC9C1E333975008CCC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C4DC9B1E333975008CCC15 /* ViewController.swift */; };
 		D8C4DC9F1E333975008CCC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C4DC9D1E333975008CCC15 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		15F4EC423678B15606590EA0 /* Pods_Eloquence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eloquence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B8553E1E33CCFE00321E7C /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D8B8556E1E34C29800321E7C /* WordContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordContainer.swift; sourceTree = "<group>"; };
 		D8C4DC961E333975008CCC15 /* Eloquence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eloquence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DC991E333975008CCC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C4DC9B1E333975008CCC15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				E16706331E34A9FD00794550 /* UseWordsModelAdapter.swift */,
 				E16706351E34AA0700794550 /* AvoidWordsModelAdapter.swift */,
 				E16706371E34B13100794550 /* WordTableViewCell.swift */,
+				D8B8556E1E34C29800321E7C /* WordContainer.swift */,
 			);
 			path = Eloquence;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				E150BE821E33F1CD00A8E07C /* OnboardStepZeroVC.swift in Sources */,
 				E16706381E34B13100794550 /* WordTableViewCell.swift in Sources */,
 				E150BE861E33F1F300A8E07C /* OnboardStepTwoVC.swift in Sources */,
+				D8B8556F1E34C29800321E7C /* WordContainer.swift in Sources */,
 				E194D26F1E33D846000A6B78 /* InitialViewController.swift in Sources */,
 				E14207271E3414D3007B7218 /* OnboardTextField.swift in Sources */,
 				E1357A4E1E336B2B0021D9CF /* SpeechTextProcessor.swift in Sources */,

@@ -13,12 +13,20 @@ import WatchKit
 
 let SAMPLE_RATE = 16000
 
+protocol WordFoundInSpeechDelegate {
+    func wordFound(word: WordContainer)
+}
+
+
 class AudioProcessor : AudioControllerDelegate {
     var audioData: NSMutableData!
     
     var spokenSentences: [String] = []
-    //DASHBOARD REFERENCE
+    
+    // DASHBOARD REFERENCE
     var dashboard: ViewController?
+    
+    var delegate: WordFoundInSpeechDelegate?
     
     init() {
         AudioController.sharedInstance.delegate = self
@@ -96,6 +104,14 @@ class AudioProcessor : AudioControllerDelegate {
                                         let lastSentence = recognitionAlternative.transcript
                                         self.spokenSentences.append(lastSentence!)
                                         SpeechTextProcessor.processText(text: lastSentence!)
+                                        { (words) in
+                                            if words.count > 0 {
+                                                for word in words {
+                                                    self.delegate?.wordFound(word: word)
+                                                }
+                                            }
+
+                                        }
 //                                        print(lastSentence)
                                         
                                     }
