@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func avoidButtonPressed(_ sender: Any) {
+        print("transparent avoid button pressed lol")
+    }
     func updateSentiment(sentiment:String, score:Float) {
         //takes a completion and uses the data to populate fields
         print ("Update Score: \(score)")
