@@ -2,6 +2,9 @@
 Built at [SwampHacks 2017](http://2017.swamphacks.com/)
 ___
 An iOS app to analyze your speech and help you speak better
+# Screenshots
+![onboarding](https://giant.gfycat.com/OfficialImaginativeArchaeocete.gif)
+![word editing](https://giant.gfycat.com/MiniatureMerryAcornweevil.gif)
 
 # Building Locally
 - Must have [ruby and rubygems](http://guides.rubygems.org/rubygems-basics/) installed
