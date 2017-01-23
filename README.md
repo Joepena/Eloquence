@@ -1,5 +1,6 @@
 # Eloquence
-#### SwampHacks 2017
+Built at [SwampHacks 2017](http://2017.swamphacks.com/)
+___
 An iOS app to analyze your speech and help you speak better
 
 # Building Locally
