@@ -37,6 +37,8 @@ class EditWordsViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addWordButton.setImage(UIImage(named: (delegate?.getButtonImageName())!), for: .normal)
+        
         self.tableView.backgroundColor = UIColor.clear
         
         self.backgroundImageView.image = UIImage(named: (delegate?.getBackgroundImageName())!)       
@@ -59,10 +61,6 @@ class EditWordsViewController: UIViewController, UITableViewDataSource, UITableV
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-//    override func viewWillLayoutSubviews() {
-//        addWordButton.imageView?.image = UIImage(named: (delegate?.getButtonImageName())!)
-//    }
-//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

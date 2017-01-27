@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T2e-46-ilT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T2e-46-ilT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="145" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-c3-Fum">
-                                <rect key="frame" x="306" y="540.66666666666652" width="25" height="24.333333333333371"/>
+                                <rect key="frame" x="306.33333333333326" y="540.66666666666652" width="24.666666666666686" height="24.333333333333371"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
                                 <color key="textColor" red="0.91523437500000004" green="0.90634860439999998" blue="0.90634860439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                 <rect key="frame" x="166" y="163" width="119" height="61"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qw-EM-Pd8">
-                                <rect key="frame" x="204" y="544" width="28" height="21"/>
+                                <rect key="frame" x="204.33333333333334" y="544" width="28" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="Mhb-Qu-jMH"/>
                                     <constraint firstAttribute="height" constant="21" id="PY5-hE-4Pf"/>
@@ -83,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSITIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-rA-grN">
-                                <rect key="frame" x="155" y="192" width="104" height="35"/>
+                                <rect key="frame" x="155" y="192" width="104" height="34.333333333333343"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="24"/>
                                 <color key="textColor" red="0.41533961892127991" green="0.41192373633384705" blue="0.40348678827285767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pT0-2Q-xfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859.4202898550725" y="921.19565217391312"/>
+            <point key="canvasLocation" x="859" y="915"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="83s-8g-Peu">
@@ -374,7 +374,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWw-H0-etv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804.3478260869567" y="138.58695652173915"/>
+            <point key="canvasLocation" x="1739" y="139"/>
         </scene>
         <!--ContainerVC-->
         <scene sceneID="TQP-UK-dv8">
@@ -453,7 +453,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your name?" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPm-HR-t4m">
-                                <rect key="frame" x="111" y="94" width="192" height="37.666666666666657"/>
+                                <rect key="frame" x="111.66666666666669" y="94" width="192" height="37.333333333333343"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="26"/>
                                 <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -496,19 +496,19 @@ Keep track of the expression of your speech with our positivity gauge on the das
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice to meet you! " textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-Tf-1ZA">
-                                <rect key="frame" x="111.66666666666669" y="96" width="191" height="38"/>
+                                <rect key="frame" x="112" y="96" width="190.66666666666669" height="37.333333333333343"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="26"/>
                                 <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech is a powerful method of communication." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be8-dR-eqn">
-                                <rect key="frame" x="38" y="189" width="338" height="68.666666666666686"/>
+                                <rect key="frame" x="38" y="188.33333333333337" width="338" height="68.666666666666629"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="24"/>
                                 <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-PZ-qnQ">
-                                <rect key="frame" x="38" y="312.66666666666669" width="338" height="171.66666666666663"/>
+                                <rect key="frame" x="38" y="312" width="338" height="171.66666666666669"/>
                                 <string key="text">The way we speak often defines our interactions with others. It can be a catalyst for lifelong relationships, or the difference between passing or failing an interview.</string>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="24"/>
                                 <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -566,7 +566,7 @@ Keep track of the expression of your speech with our positivity gauge on the das
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Examples: um, like, literally)" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjq-8s-0MK">
-                                <rect key="frame" x="95" y="442.66666666666669" width="224" height="29"/>
+                                <rect key="frame" x="95" y="442.66666666666669" width="224" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="20"/>
                                 <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
